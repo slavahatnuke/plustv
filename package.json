@@ -29,5 +29,11 @@
   "homepage": "https://github.com/slavahatnuke/plustv#readme",
   "devDependencies": {
     "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "commander": "^2.9.0",
+    "express": "^4.15.2",
+    "plus.application": "^1.1.14"
   }
 }
