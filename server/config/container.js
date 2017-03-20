@@ -6,6 +6,8 @@ module.exports = (container) => {
         return container.find(['movie', 'provider']);
     });
 
-    container.add('RutrackerMovieProvider', require('../movie/RutrackerMovieProvider'), [])
+    container.add('RutorMovieProvider', require('../movie/RutorMovieProvider'), ['BrowserService'])
     container.add('StorageService', require('../storage/StorageService'), ['config/zero']);
+
+    container.add('BrowserService', require('../browser/BrowserService'), ['config/browser']);
 };

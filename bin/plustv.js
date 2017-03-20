@@ -7,7 +7,7 @@ program
     .version(require('../package.json').version)
     .command('search <q>')
     .action((q) => {
-        app.MovieService.search(q).then((movies) => console.log(movies))
+        app.MovieService.search(q).then((movies) => console.log(JSON.stringify(movies, null, '\t')))
     });
 
 program.parse(process.argv);

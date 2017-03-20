@@ -3,5 +3,9 @@ module.exports = {
     port: 3000,
     zero: {
         secret: 'secret.. tshhh'
+    },
+    browser: {
+        name: 'chrome',
+        pageLoadTimeout: 60 * 1000
     }
 };

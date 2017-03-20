@@ -5,6 +5,7 @@ module.exports = class Movie {
 
         this.title = null;
         this.description = null;
+        this.magnet = null;
 
         this.setup(options);
     }
