@@ -32,8 +32,12 @@
   },
   "dependencies": {
     "body-parser": "^1.17.1",
+    "chromedriver": "^2.28.0",
     "commander": "^2.9.0",
     "express": "^4.15.2",
-    "plus.application": "^1.1.14"
+    "plus.application": "^1.1.14",
+    "plus.tester": "0.0.5",
+    "selenium-webdriver": "^3.3.0",
+    "zero-store": "0.0.3"
   }
 }

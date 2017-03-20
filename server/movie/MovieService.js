@@ -1,13 +1,17 @@
 const Movie = require('./Movie');
 
 module.exports = class MovieService {
-    constructor() {
-
+    constructor(providers, StorageService) {
+        this.providers = providers;
+        this.StorageService = StorageService;
     }
 
     search(q) {
-        return Promise.resolve().then(() => {
-            return [new Movie];
-        });
+        let result = [];
+        return Promise.all(this.providers.map((provider) => provider.search(q)))
+            .then((arrayOfMovies) => {
+                return result.concat.apply(result, arrayOfMovies);
+            })
+            .then((movies) => this.StorageService.save(movies));
     }
 }
