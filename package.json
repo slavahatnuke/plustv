@@ -31,10 +31,12 @@
     "mocha": "^3.2.0"
   },
   "dependencies": {
+    "apipe": "0.0.4",
     "body-parser": "^1.17.1",
     "chromedriver": "^2.28.0",
     "commander": "^2.9.0",
     "express": "^4.15.2",
+    "phantomjs": "^2.1.7",
     "plus.application": "^1.1.14",
     "plus.tester": "0.0.5",
     "selenium-webdriver": "^3.3.0",

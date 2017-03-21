@@ -6,6 +6,7 @@ module.exports = {
     },
     browser: {
         name: 'chrome',
-        pageLoadTimeout: 60 * 1000
+        pageLoadTimeout: 60 * 1000,
+        waitTimeout: 60 * 1000
     }
 };

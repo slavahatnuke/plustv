@@ -7,6 +7,10 @@ module.exports = class Movie {
         this.description = null;
         this.magnet = null;
 
+        this.peers = 0;
+        this.seeds = 0;
+        this.size = null;
+
         this.setup(options);
     }
 
