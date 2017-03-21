@@ -101,10 +101,10 @@ module.exports = class RutorMovieProvider extends MovieProvider {
             })
 
             //size
-            .then((selector) => $.all(`#index table tr td:nth-child(3)`))
+            .then((selector) => $.all(`#index table tr td:nth-last-child(2)`))
             .then((elements) => Promise.all(elements.map((element) => element.getAttribute('innerText'))))
             .then((items) => {
-                items.forEach((item, idx) => movies[idx] && (movies[idx].size = item));
+                items.forEach((item, idx) => movies[(idx-1)] && (movies[(idx-1)].size = item));
             })
 
             // stop
