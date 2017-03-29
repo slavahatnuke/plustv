@@ -11,6 +11,9 @@
   },
   "scripts": {
     "start": "node index.js",
+    "dev": "concurrently 'npm run dev.client' 'npm run dev.server' --prefix '[{name}]' --names 'client,server'",
+    "dev.client": "cd client && npm start",
+    "dev.server": "nodemon -i node_modules -i client server/app.js",
     "test": "mocha",
     "postinstall": "cd client && npm install"
   },
@@ -29,6 +32,8 @@
   },
   "homepage": "https://github.com/slavahatnuke/plustv#readme",
   "devDependencies": {
+    "concurrently": "^3.4.0",
+    "nodemon": "^1.11.0",
     "mocha": "^3.2.0"
   },
   "dependencies": {
