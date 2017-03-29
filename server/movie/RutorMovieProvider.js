@@ -70,6 +70,14 @@ module.exports = class RutorMovieProvider extends MovieProvider {
                 items.forEach((item, idx) => movies[(idx-1)] && (movies[(idx-1)].size = item));
             })
 
+            .then(() => {
+                return movies.map((movie) => {
+                    movie.seeds = parseInt(movie.seeds) || 0;
+                    movie.peers = parseInt(movie.peers) || 0;
+                    return movie;
+                });
+            })
+
             // stop
             .then(() => browser.stop())
             .catch((err) => {

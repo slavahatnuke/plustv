@@ -12,6 +12,7 @@ module.exports = class MovieService {
             .then((arrayOfMovies) => {
                 return result.concat.apply(result, arrayOfMovies);
             })
-            .then((movies) => this.StorageService.save(movies));
+            .then((movies) => this.StorageService.save(movies))
+            .then((movies) => movies.sort((a, b) => a.seeds > b.seeds));
     }
 }

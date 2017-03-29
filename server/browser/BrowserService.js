@@ -10,13 +10,13 @@ module.exports = class BrowserService {
     }
 
     getBrowser() {
-        let tester = new Browser(() => new seleniumWebdriver.Builder().forBrowser(this.name).build());
+        let tester = new Browser(() => {
+            let driver = new seleniumWebdriver.Builder().forBrowser(this.name).build();
+            driver.manage().timeouts().pageLoadTimeout(this.pageLoadTimeout);
+            return driver;
+        });
 
         tester.setup({waitTimeout: this.waitTimeout});
-
-        tester.getDriver()
-            .then((driver) => driver.manage().timeouts().pageLoadTimeout(this.pageLoadTimeout));
-
         return tester;
     }
 }
