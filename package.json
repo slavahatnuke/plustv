@@ -38,8 +38,8 @@
     "express": "^4.15.2",
     "phantomjs": "^2.1.7",
     "plus.application": "^1.1.14",
-    "plus.tester": "0.0.5",
+    "plus.tester": "^0.0.8",
     "selenium-webdriver": "^3.3.0",
-    "zero-store": "0.0.3"
+    "zero-store": "^0.0.4"
   }
 }
